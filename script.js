@@ -23,9 +23,34 @@ class Human {
     }
 }
 
-let Dima = new Human("Дмитро", 18, "80kg", "man")
+class Man extends Human{
+    constructor(name, age, weight) {
+        super(name, age, weight, "man")
+    }
+    greeeting(){
+        return `Приві! Я ${this.name}, мені ${this.age} років`
+    }
+}
 
-console.log(Dima.grtInfo(null))
-console.log(Dima.grtInfo("name"))
-console.log(Dima.greeeting())
+class Woman extends Human{
+    constructor(name, age, weight) {
+        super(name, age, weight, "woman")
+    }
+    greeeting(){
+        return `Приві! Я ${this.name}`
+    }
+}
 
+
+
+// let Dima = new Human("Дмитро", 18, "80kg", "man")
+
+// console.log(Dima.grtInfo(null))
+// console.log(Dima.grtInfo("name"))
+// console.log(Dima.greeeting())
+
+
+let Illa = new Man("Ілля", 19, "55kg");
+let Ulianna = new Woman("Юліанна", 18, "60kg");
+console.log(Illa.greeeting());
+console.log(Ulianna.greeeting());
